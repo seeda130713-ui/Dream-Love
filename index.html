@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dream ♡ Donatella</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family:
+                "DM Sans",
+                "Noto Sans Thai",
+                sans-serif;
+
+            color: #66505a;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(255,255,255,.95),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 90% 85%,
+                    rgba(242,183,202,.45),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff8fa,
+                    #fcebf2 50%,
+                    #fff5f8
+                );
+
+            overflow-x: hidden;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           BACKGROUND DECOR
+        ===================================================== */
+
+        .glow {
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: #f5cbd8;
+
+            filter: blur(100px);
+
+            opacity: .25;
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+        .glow.one {
+            top: -180px;
+            left: -130px;
+        }
+
+        .glow.two {
+            right: -150px;
+            bottom: -150px;
+        }
+
+
+        /* =====================================================
+           PAGE SYSTEM
+        ===================================================== */
+
+        .page {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 30px;
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .page.hidden {
+            display: none;
+        }
+
+
+        /* =====================================================
+           WELCOME
+        ===================================================== */
+
+        #welcomePage {
+            min-height: 100vh;
+
+            text-align: center;
+        }
+
+        .welcome-content {
+            max-width: 700px;
+        }
+
+        .welcome-small {
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #b68a99;
+
+            margin-bottom: 25px;
+        }
+
+        .welcome-title {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(
+                48px,
+                10vw,
+                82px
+            );
+
+            font-weight: 500;
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            color: #765763;
+        }
+
+        .welcome-title span {
+            color: #df9bb1;
+
+            font-size: .7em;
+
+            margin: 0 8px;
+        }
+
+        .welcome-subtitle {
+            margin-top: 25px;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 17px;
+
+            font-style: italic;
+
+            color: #aa8793;
+        }
+
+        .enter-button {
+            margin-top: 42px;
+
+            padding: 15px 38px;
+
+            border: 1px solid #dfbcc8;
+
+            border-radius: 100px;
+
+            background:
+                rgba(255,255,255,.65);
+
+            color: #a76f82;
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            letter-spacing: 2px;
+
+            cursor: pointer;
+
+            transition: .35s ease;
+
+            box-shadow:
+                0 12px 35px
+                rgba(181,115,140,.1);
+        }
+
+        .enter-button:hover {
+            background: #fff;
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(181,115,140,.18);
+        }
+
+        .enter-button:active {
+            transform: scale(.96);
+        }
+
+
+        /* =====================================================
+           MAIN WEBSITE
+        ===================================================== */
+
+        #mainPage {
+            display: block;
+
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            width: 100%;
+
+            max-width: 950px;
+
+            margin: auto;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            text-align: center;
+
+            padding:
+                70px 20px
+                80px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color: #b68a99;
+
+            margin-bottom: 22px;
+        }
+
+        .hero-title {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(
+                    48px,
+                    8vw,
+                    76px
+                );
+
+            font-weight: 500;
+
+            letter-spacing: -2.5px;
+
+            color: #765763;
+        }
+
+        .hero-title span {
+            color: #df9bb1;
+
+            margin: 0 8px;
+        }
+
+        .hero-text {
+            margin-top: 18px;
+
+            color: #aa8b95;
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           COUNTER
+        ===================================================== */
+
+        .counter-area {
+            margin-top: 50px;
+        }
+
+        .counter {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 0;
+        }
+
+        .time {
+            width: 150px;
+
+            text-align: center;
+
+            padding: 0 15px;
+        }
+
+        .number {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 45px;
+
+            font-weight: 500;
+
+            line-height: 1;
+
+            color: #c97996;
+
+            letter-spacing: -1px;
+        }
+
+        .label {
+            margin-top: 9px;
+
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            color: #b0959e;
+        }
+
+        .separator {
+            width: 1px;
+
+            height: 42px;
+
+            background: #ead5dc;
+        }
+
+        .since {
+            margin-top: 30px;
+
+            text-align: center;
+
+            font-size: 12px;
+
+            color: #b0959e;
+        }
+
+
+        /* =====================================================
+           MEMORY BUTTON
+        ===================================================== */
+
+        .memory-button-area {
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 50px;
+        }
+
+        .memory-button {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding: 14px 25px;
+
+            border: 1px solid #dfc1cb;
+
+            border-radius: 100px;
+
+            background:
+                rgba(255,255,255,.6);
+
+            color: #a76f82;
+
+            font-size: 11px;
+
+            letter-spacing: 1.5px;
+
+            cursor: pointer;
+
+            transition: .3s ease;
+        }
+
+        .memory-button:hover {
+            background: #fff;
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(180,110,135,.12);
+        }
+
+        .memory-button .icon {
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           DIVIDER
+        ===================================================== */
+
+        .section-divider {
+            width: 100%;
+
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #ead5dc,
+                    transparent
+                );
+
+            margin: 40px 0;
+        }
+
+
+        /* =====================================================
+           MEMORIES
+        ===================================================== */
+
+        #memories {
+            scroll-margin-top: 40px;
+
+            padding:
+                80px 0
+                30px;
+        }
+
+        .memory-heading {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .memory-heading small {
+            display: block;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+            color: #b68a99;
+
+            margin-bottom: 13px;
+        }
+
+        .memory-heading h2 {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 43px;
+
+            font-weight: 500;
+
+            color: #765763;
+        }
+
+        .memory-heading p {
+            margin-top: 10px;
+
+            font-size: 13px;
+
+            color: #ad919b;
+        }
+
+
+        /* =====================================================
+           PHOTO GRID
+        ===================================================== */
+
+        .memory-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .memory-card {
+            background:
+                rgba(255,255,255,.65);
+
+            border:
+                1px solid
+                rgba(255,255,255,.9);
+
+            padding: 10px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 15px 45px
+                rgba(185,125,145,.08);
+
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+
+            cursor: pointer;
+        }
+
+        .memory-card:hover {
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 22px 50px
+                rgba(185,125,145,.15);
+        }
+
+        .memory-image {
+            width: 100%;
+
+            aspect-ratio: 4 / 5;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 14px;
+        }
+
+        .memory-info {
+            padding:
+                17px
+                9px
+                10px;
+        }
+
+        .memory-date {
+            font-size: 9px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            color: #c18a9d;
+
+            margin-bottom: 7px;
+        }
+
+        .memory-caption {
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 16px;
+
+            color: #80616d;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           IMAGE POPUP
+        ===================================================== */
+
+        .lightbox {
+            position: fixed;
+
+            inset: 0;
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 25px;
+
+            background:
+                rgba(80,55,65,.75);
+
+            backdrop-filter: blur(12px);
+
+            z-index: 1000;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox-content {
+            max-width: 850px;
+
+            width: 100%;
+
+            text-align: center;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+
+            max-height: 75vh;
+
+            border-radius: 15px;
+
+            object-fit: contain;
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.25);
+        }
+
+        .lightbox-caption {
+            margin-top: 18px;
+
+            color: white;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 18px;
+        }
+
+        .close-lightbox {
+            position: fixed;
+
+            top: 25px;
+            right: 30px;
+
+            width: 40px;
+            height: 40px;
+
+            border: 1px solid
+                rgba(255,255,255,.4);
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.1);
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            text-align: center;
+
+            padding:
+                70px 20px
+                20px;
+
+            color: #b79ba5;
+
+            font-size: 11px;
+
+            letter-spacing: .5px;
+        }
+
+        footer span {
+            color: #dc93aa;
+        }
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        .floating-heart {
+            position: fixed;
+
+            bottom: -30px;
+
+            color: #dda0b4;
+
+            opacity: .25;
+
+            pointer-events: none;
+
+            animation:
+                floatUp linear forwards;
+
+            z-index: 0;
+        }
+
+        @keyframes floatUp {
+
+            from {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: .3;
+            }
+
+            to {
+                transform:
+                    translateY(-110vh)
+                    rotate(15deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 700px) {
+
+            .page {
+                padding: 18px;
+            }
+
+            #mainPage {
+                padding-top: 30px;
+                padding-bottom: 50px;
+            }
+
+            .hero {
+                padding:
+                    60px 10px
+                    60px;
+            }
+
+            .hero-title {
+                font-size: 46px;
+            }
+
+            .counter {
+                width: 100%;
+            }
+
+            .time {
+                width: auto;
+
+                flex: 1;
+
+                padding: 0 5px;
+            }
+
+            .number {
+                font-size: 30px;
+            }
+
+            .label {
+                font-size: 8px;
+
+                letter-spacing: 1px;
+            }
+
+            .separator {
+                height: 30px;
+            }
+
+            .memory-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 12px;
+            }
+
+            .memory-card {
+                padding: 7px;
+
+                border-radius: 15px;
+            }
+
+            .memory-image {
+                border-radius: 10px;
+            }
+
+            .memory-info {
+                padding:
+                    12px 5px
+                    7px;
+            }
+
+            .memory-caption {
+                font-size: 14px;
+            }
+
+            .memory-heading h2 {
+                font-size: 36px;
+            }
+        }
+
+
+        @media (max-width: 400px) {
+
+            .welcome-title {
+                font-size: 43px;
+
+                letter-spacing: -2px;
+            }
+
+            .hero-title {
+                font-size: 40px;
+            }
+
+            .number {
+                font-size: 26px;
+            }
+
+            .memory-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Background -->
+    <div class="glow one"></div>
+    <div class="glow two"></div>
+
+
+    <!-- =====================================================
+         WELCOME PAGE
+    ====================================================== -->
+
+    <section
+        class="page"
+        id="welcomePage">
+
+        <div class="welcome-content">
+
+            <div class="welcome-small">
+                OUR LITTLE STORY
+            </div>
+
+            <h1 class="welcome-title">
+                Dream
+                <span>♡</span>
+                Donatella
+            </h1>
+
+            <p class="welcome-subtitle">
+                every moment with you is a memory worth keeping
+            </p>
+
+            <button
+                class="enter-button"
+                onclick="enterWebsite()">
+
+                ENTER OUR STORY
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN PAGE
+    ====================================================== -->
+
+    <section
+        class="page hidden"
+        id="mainPage">
+
+        <div class="container">
+
+
+            <!-- HERO -->
+
+            <div class="hero">
+
+                <div class="eyebrow">
+                    OUR STORY
+                </div>
+
+                <h1 class="hero-title">
+                    Dream
+                    <span>♡</span>
+                    Donatella
+                </h1>
+
+                <p class="hero-text">
+                    เราอยู่ด้วยกันมาแล้ว...
+                </p>
+
+
+                <!-- COUNTER -->
+
+                <div class="counter-area">
+
+                    <div class="counter">
+
+                        <div class="time">
+
+                            <div
+                                class="number"
+                                id="days">
+                                0
+                            </div>
+
+                            <div class="label">
+                                DAYS
+                            </div>
+
+                        </div>
+
+
+                        <div class="separator"></div>
+
+
+                        <div class="time">
+
+                            <div
+                                class="number"
+                                id="hours">
+                                00
+                            </div>
+
+                            <div class="label">
+                                HOURS
+                            </div>
+
+                        </div>
+
+
+                        <div class="separator"></div>
+
+
+                        <div class="time">
+
+                            <div
+                                class="number"
+                                id="minutes">
+                                00
+                            </div>
+
+                            <div class="label">
+                                MINUTES
+                            </div>
+
+                        </div>
+
+
+                        <div class="separator"></div>
+
+
+                        <div class="time">
+
+                            <div
+                                class="number"
+                                id="seconds">
+                                00
+                            </div>
+
+                            <div class="label">
+                                SECONDS
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="since">
+                        Since 06 • 06 • 2026
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY BUTTON -->
+
+                <div class="memory-button-area">
+
+                    <button
+                        class="memory-button"
+                        onclick="goToMemories()">
+
+                        <span class="icon">
+                            ♡
+                        </span>
+
+                        VIEW OUR MEMORIES
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="section-divider"></div>
+
+
+            <!-- =================================================
+                 MEMORIES
+            ================================================== -->
+
+            <section id="memories">
+
+                <div class="memory-heading">
+
+                    <small>
+                        OUR MEMORIES
+                    </small>
+
+                    <h2>
+                        Little Moments
+                    </h2>
+
+                    <p>
+                        รูปเล็ก ๆ ของเรื่องราวที่เราอยากเก็บไว้
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="memory-grid"
+                    id="memoryGrid">
+
+                    <!--
+                    รูปจะถูกสร้างด้วย JavaScript
+                    -->
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer>
+                Made with <span>♡</span> by Dream
+            </footer>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LIGHTBOX
+    ====================================================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox">
+
+        <button
+            class="close-lightbox"
+            onclick="closeLightbox()">
+
+            ×
+
+        </button>
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt="Memory">
+
+            <div
+                class="lightbox-caption"
+                id="lightboxCaption">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* =====================================================
+           ENTER WEBSITE
+        ====================================================== */
+
+        function enterWebsite() {
+
+            const welcome =
+                document.getElementById(
+                    "welcomePage"
+                );
+
+            const main =
+                document.getElementById(
+                    "mainPage"
+                );
+
+            welcome.style.opacity = "0";
+
+            welcome.style.transform =
+                "scale(.97)";
+
+
+            setTimeout(() => {
+
+                welcome.classList.add(
+                    "hidden"
+                );
+
+                main.classList.remove(
+                    "hidden"
+                );
+
+                window.scrollTo(
+                    0,
+                    0
+                );
+
+            }, 700);
+        }
+
+
+        /* =====================================================
+           RELATIONSHIP START DATE
+        ====================================================== */
+
+        const startDate =
+            new Date(
+                "2026-06-06T00:00:00"
+            );
+
+
+        /* =====================================================
+           LIVE COUNTER
+        ====================================================== */
+
+        function updateCounter() {
+
+            const now =
+                new Date();
+
+            let difference =
+                now.getTime()
+                -
+                startDate.getTime();
+
+
+            if (difference < 0) {
+
+                difference = 0;
+
+            }
+
+
+            const totalSeconds =
+                Math.floor(
+                    difference / 1000
+                );
+
+
+            const days =
+                Math.floor(
+                    totalSeconds /
+                    86400
+                );
+
+
+            const hours =
+                Math.floor(
+                    (totalSeconds %
+                    86400) / 3600
+                );
+
+
+            const minutes =
+                Math.floor(
+                    (totalSeconds %
+                    3600) / 60
+                );
+
+
+            const seconds =
+                totalSeconds % 60;
+
+
+            document.getElementById(
+                "days"
+            ).textContent = days;
+
+
+            document.getElementById(
+                "hours"
+            ).textContent =
+                String(hours)
+                .padStart(2, "0");
+
+
+            document.getElementById(
+                "minutes"
+            ).textContent =
+                String(minutes)
+                .padStart(2, "0");
+
+
+            document.getElementById(
+                "seconds"
+            ).textContent =
+                String(seconds)
+                .padStart(2, "0");
+        }
+
+
+        updateCounter();
+
+        setInterval(
+            updateCounter,
+            1000
+        );
+
+
+        /* =====================================================
+           MEMORIES
+           
+           แก้ตรงนี้เพื่อเพิ่มรูป
+        ====================================================== */
+
+        const memories = [
+
+            {
+                image: "images/01.jpg",
+
+                date: "06 • 06 • 2026",
+
+                caption:
+                    "วันแรกของเรื่องราวของเรา ♡"
+            },
+
+            {
+                image: "images/02.jpg",
+
+                date: "A SPECIAL DAY",
+
+                caption:
+                    "ช่วงเวลาธรรมดา ๆ ที่โคตรพิเศษ"
+            },
+
+            {
+                image: "images/03.jpg",
+
+                date: "OUR MEMORY",
+
+                caption:
+                    "แค่มีเธออยู่ด้วยก็เป็นวันที่ดีแล้ว"
+            },
+
+            {
+                image: "images/04.jpg",
+
+                date: "TOGETHER",
+
+                caption:
+                    "อีกหนึ่งความทรงจำที่อยากเก็บไว้"
+            },
+
+            {
+                image: "images/05.jpg",
+
+                date: "A LITTLE MOMENT",
+
+                caption:
+                    "ความสุขเล็ก ๆ ของเราสองคน"
+            },
+
+            {
+                image: "images/06.jpg",
+
+                date: "FOREVER MEMORY",
+
+                caption:
+                    "หวังว่าจะมีรูปของเราเพิ่มขึ้นอีกเยอะ ๆ"
+            }
+
+        ];
+
+
+        /* =====================================================
+           CREATE MEMORY CARDS
+        ====================================================== */
+
+        function loadMemories() {
+
+            const grid =
+                document.getElementById(
+                    "memoryGrid"
+                );
+
+
+            grid.innerHTML = "";
+
+
+            memories.forEach(
+                (memory) => {
+
+                    const card =
+                        document.createElement(
+                            "div"
+                        );
+
+                    card.className =
+                        "memory-card";
+
+
+                    card.innerHTML = `
+
+                        <img
+                            class="memory-image"
+                            src="${memory.image}"
+                            alt="Our Memory"
+                            loading="lazy"
+                        >
+
+                        <div class="memory-info">
+
+                            <div class="memory-date">
+                                ${memory.date}
+                            </div>
+
+                            <div class="memory-caption">
+                                ${memory.caption}
+                            </div>
+
+                        </div>
+
+                    `;
+
+
+                    card.onclick = () => {
+
+                        openLightbox(
+                            memory.image,
+                            memory.caption
+                        );
+
+                    };
+
+
+                    grid.appendChild(
+                        card
+                    );
+
+                }
+            );
+        }
+
+
+        loadMemories();
+
+
+        /* =====================================================
+           GO TO MEMORIES
+        ====================================================== */
+
+        function goToMemories() {
+
+            document
+                .getElementById("memories")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+        }
+
+
+        /* =====================================================
+           LIGHTBOX
+        ====================================================== */
+
+        function openLightbox(
+            image,
+            caption
+        ) {
+
+            document.getElementById(
+                "lightboxImage"
+            ).src = image;
+
+
+            document.getElementById(
+                "lightboxCaption"
+            ).textContent =
+                caption;
+
+
+            document.getElementById(
+                "lightbox"
+            ).classList.add(
+                "active"
+            );
+        }
+
+
+        function closeLightbox() {
+
+            document.getElementById(
+                "lightbox"
+            ).classList.remove(
+                "active"
+            );
+        }
+
+
+        /* ปิดเมื่อคลิกพื้นหลัง */
+
+        document
+            .getElementById("lightbox")
+            .addEventListener(
+                "click",
+                function(event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeLightbox();
+
+                    }
+
+                }
+            );
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ====================================================== */
+
+        function createHeart() {
+
+            const heart =
+                document.createElement(
+                    "div"
+                );
+
+
+            heart.className =
+                "floating-heart";
+
+
+            heart.textContent =
+                Math.random() > .5
+                    ? "♡"
+                    : "♥";
+
+
+            heart.style.left =
+                Math.random() *
+                100 +
+                "vw";
+
+
+            heart.style.fontSize =
+                (
+                    10 +
+                    Math.random() * 10
+                ) +
+                "px";
+
+
+            heart.style.animationDuration =
+                (
+                    7 +
+                    Math.random() * 5
+                ) +
+                "s";
+
+
+            document.body.appendChild(
+                heart
+            );
+
+
+            setTimeout(
+                () => {
+                    heart.remove();
+                },
+                13000
+            );
+        }
+
+
+        setInterval(
+            createHeart,
+            1400
+        );
+
+    </script>
+
+</body>
+
+</html>
